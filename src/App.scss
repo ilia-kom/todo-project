@@ -63,20 +63,48 @@
     margin-bottom: 30px;
   }
 
-  .inputLine {
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #eee;
-    text-align: center;
-    border-radius: 25px;
-    padding: 10px 20px 10px 20px;
-    border: none;
-    min-height: 50px;
+  .inputForm {
+    position: relative;
 
-    &:focus {
-      background-color: white;
+    .inputLine {
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #eee;
+      text-align: center;
+      border-radius: 25px;
+      padding: 10px 40px 10px 40px;
+      border: none;
+      min-height: 50px;
+  
+      &:focus {
+        background-color: white;
+        padding: 10px 80px 10px 40px;
+        text-align: left;
+      }
+
+      &:focus + .addBtn {
+        visibility: visible;
+      }
+
+    }
+  
+    .addBtn {
+      visibility: hidden;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 40px;
+        width: 75px;
+        background-color: rgb(255, 226, 60);
+        border: none;
+        border-radius: 20px;
+        &:hover {
+          background-color: gold;
+          visibility: visible;
+        }
     }
   }
+  
 
   .noElementsPlaceholder {
     text-align: center;
@@ -276,7 +304,7 @@
 
 
     text-decoration: none;
-      color: rgb(150, 150, 150);
+      color: #969696;
 
       &:hover {
         color: rgb(36, 36, 36);
@@ -286,8 +314,12 @@
   }
 
 
-
-
+  .loadingPlaceholder {
+    align-self: center;
+  }
+  
 }
+
+
 
 
